@@ -145,7 +145,7 @@ figcaption {
 }
 
 #rainbow {
-    animation: color-change 5s infinite
+    animation: color-change 25s infinite
 }
 
 @keyframes color-change {
