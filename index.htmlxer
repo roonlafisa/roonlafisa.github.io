@@ -77,14 +77,14 @@ Main body of the website
                 <li>Developed a few PCB boards from design to assembly - shout out to dear colleague Jonathan Colucci. </li>
                 <li>Picked up <span id="rainbow">systems engineering practices</span>. </li>
                 <li>Attempted to implement <span id="rainbow">environmental testing</span> using MIL-810. </li>
-                <li>And many more... </li>
             </ul>  
             
         <li>2022: Picked up <span id="rainbow">HTML</span>, <span id="rainbow">CSS</span> and <span id="rainbow">JS</span> through building this website.
 	<li>2023: Got my basic drone pilot license for operating drones under 25 kg.
 	<li>2023-present: Working at <em>Drone Delivery Canada</em> as a UAV System Integration Engineer.  
             <ul>
-                <li>Designed avionics hardware for drones. </li>
+                <li>Developed avionics hardware for an unmanned helicopter. </li>
+		<li>Implemented system engineering practices following ARP 4754. </li>
                 <li>And many more... </li>
             </ul>
 	</ul>
