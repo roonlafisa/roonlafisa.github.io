@@ -85,6 +85,7 @@ Main body of the website
             <ul>
                 <li>Developed avionics hardware for an unmanned helicopter. </li>
 		<li>Implemented system engineering practices following ARP 4754. </li>
+		<li>Learnt streaming camera videos via an LTE modem (microhard BulletCATX) on jetson based linux. </li>
                 <li>And many more... </li>
             </ul>
 	</ul>
