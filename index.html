@@ -3,65 +3,12 @@
 <head>
   <title>Engineering Portfolio</title>
   <link rel="stylesheet" type="text/css" href="css/styles.css">
-  <style>
-    /* Reset default styles */
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-    
-    body {
-      font-family: Arial, sans-serif;
-      background-color: #ffffff;
-    }
-    
-    .container {
-      max-width: 800px;
-      margin: 0 auto;
-      padding: 20px;
-    }
-    
-    .tabs {
-      display: flex;
-      justify-content: center;
-      margin-bottom: 20px;
-    }
-    
-    .tab {
-      padding: 10px 20px;
-      background-color: #ffffff;
-      color: #000000;
-      font-weight: bold;
-      cursor: pointer;
-    }
-    
-    .tab:hover {
-      background-color: #f5f5f5;
-    }
-    
-    .tab.active {
-      background-color: #000000;
-      color: #ffffff;
-    }
-    
-    .content {
-      display: none;
-      padding: 20px;
-      background-color: #ffffff;
-      color: #000000;
-    }
-    
-    .content.active {
-      display: block;
-    }
-  </style>
 </head>
 <body>
   <div class="container">
     <!-- Button container -->
     <div class="buttons">
-      <a href="https://github.com/your_username" target="_blank" class="button">GitHub</a>
+      <button class="button" onclick="window.open('https://github.com/your_username', '_blank')">GitHub</button>
       <a href="resume/your_resume.pdf" download class="button">Download Resume</a>
     </div>
     
@@ -71,17 +18,41 @@
     </div>
     
     <div id="history" class="content active">
-      <h2>General History</h2>
-      <p>Add your general history content here.</p>
+      <h2 id="generalHistoryTitle"></h2>
+      <p id="generalHistoryContent"></p>
     </div>
     
     <div id="resume" class="content">
-      <h2>Resume</h2>
-      <p>Add your resume content here.</p>
+      <h2 id="resumeTitle"></h2>
+      
+      <div class="resume-section">
+        <h3>Education</h3>
+        <ul id="educationList"></ul>
+      </div>
+      
+      <div class="resume-section">
+        <h3>Experience</h3>
+        <ul id="experienceList"></ul>
+      </div>
+      
+      <div class="resume-section">
+        <h3>Skills</h3>
+        <ul id="skillsList"></ul>
+      </div>
+      
+      <div class="resume-section">
+        <h3>Projects</h3>
+        <ul id="projectsList"></ul>
+      </div>
+      
+      <div class="resume-section">
+        <h3>Awards</h3>
+        <ul id="awardsList"></ul>
+      </div>
     </div>
   </div>
   
-  <script src="config.json"></script>
+  <script src="data/config.json"></script>
   <script>
     function changeTab(event, tabId) {
       // Get all tab elements
@@ -109,20 +80,59 @@
     
     // Load and update content from the configuration file
     window.addEventListener('DOMContentLoaded', function() {
-      fetch('config.json')
+      fetch('data/config.json')
         .then(response => response.json())
         .then(data => {
           // Update general history content
-          document.getElementById('history').innerHTML = `
-            <h2>${data.generalHistory.title}</h2>
-            <p>${data.generalHistory.content}</p>
-          `;
+          document.getElementById('generalHistoryTitle').textContent = data.generalHistory.title;
+          document.getElementById('generalHistoryContent').textContent = data.generalHistory.content;
           
           // Update resume content
-          document.getElementById('resume').innerHTML = `
-            <h2>${data.resume.title}</h2>
-            <p>${data.resume.content}</p>
-          `;
+          document.getElementById('resumeTitle').textContent = data.resume.title;
+          
+          // Update education
+          var educationList = document.getElementById('educationList');
+          data.resume.education.forEach(function(education) {
+            var li = document.createElement('li');
+            li.textContent = education;
+            educationList.appendChild(li);
+          });
+          
+          // Update experience
+          var experienceList = document.getElementById('experienceList');
+          data.resume.experience.forEach(function(experience) {
+            var li = document.createElement('li');
+            li.innerHTML = '<strong>' + experience.position + '</strong>, ' + experience.company + ' (' + experience.duration + ')<ul>';
+            experience.responsibilities.forEach(function(responsibility) {
+              li.innerHTML += '<li>' + responsibility + '</li>';
+            });
+            li.innerHTML += '</ul>';
+            experienceList.appendChild(li);
+          });
+          
+          // Update skills
+          var skillsList = document.getElementById('skillsList');
+          data.resume.skills.forEach(function(skill) {
+            var li = document.createElement('li');
+            li.textContent = skill;
+            skillsList.appendChild(li);
+          });
+          
+          // Update projects
+          var projectsList = document.getElementById('projectsList');
+          data.resume.projects.forEach(function(project) {
+            var li = document.createElement('li');
+            li.innerHTML = '<strong>' + project.name + '</strong> (Role: ' + project.role + ')<br>' + project.description;
+            projectsList.appendChild(li);
+          });
+          
+          // Update awards
+          var awardsList = document.getElementById('awardsList');
+          data.resume.awards.forEach(function(award) {
+            var li = document.createElement('li');
+            li.textContent = award;
+            awardsList.appendChild(li);
+          });
         })
         .catch(error => console.error('Error fetching configuration:', error));
     });
