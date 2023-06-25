@@ -1,166 +1,84 @@
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap');
+/* Reset default styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
 body {
-    color: #454545;
-    line-height: 1.5;
-    font-size: 16px;
-    margin: 60px auto;
-    max-width: 800px;
-    padding: 0 10px;
-    font-family: 'Open Sans', sans-serif;
-    text-align: justify;
-    text-justify: inter-word;
+  font-family: Arial, sans-serif;
+  background-color: #ffffff;
 }
 
-
-.inverted {
-    background-color: #000;
-}
-
-.inverted body {
-    color: #fff;
-}
-
-
-h1, h2, h3 {
-    line-height: 1.2;
-}
-
-a {
-    color: #07a;
-}
-
-a:visited {
-    color: #85144b;
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
 }
 
 .buttons {
-    position: absolute;
-    right: 10px;
-    top: 10px;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-end;
-    border-radius: 2px;
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 20px;
 }
 
-.buttons button {
-    padding: 0.2em 0.3em;
-    border: none;
-    text-decoration: underline;
-    margin: 2px;
-    cursor: pointer;
-    text-align: right;
-    width: auto;
+.button {
+  margin-left: 10px;
+  padding: 5px 10px;
+  background-color: #ffffff;
+  color: #000000;
+  font-weight: bold;
+  font-size: 12px;
+  text-decoration: none;
+  border: 1px solid #000000;
+  border-radius: 4px;
+  opacity: 0.6;
 }
 
-
-#invert-btn {
-    background-color: black;
-    color: white;
+.button:hover {
+  background-color: #f5f5f5;
+  opacity: 1;
 }
 
-.red-txt {
-    color: #730000;
+.tabs {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
 }
 
-.blue-txt {
-    color: #00e;
-    cursor: not-allowed;
+.tab {
+  padding: 10px 20px;
+  background-color: #ffffff;
+  color: #000000;
+  font-weight: bold;
+  cursor: pointer;
 }
 
-.violet-txt {
-    color: #551a8b;
-    cursor: not-allowed;
+.tab:hover {
+  background-color: #f5f5f5;
 }
 
-.wrong {
-    text-decoration: underline;
-    color: #c0392b;
-    font-weight: 600;
+.tab.active {
+  background-color: #000000;
+  color: #ffffff;
 }
 
-.small-txt {
-    font-size: 8px;
+.content {
+  display: none;
+  padding: 20px;
+  background-color: #ffffff;
+  color: #000000;
 }
 
-.logo {
-    height: 1em;
+.content.active {
+  display: block;
 }
 
-.color-txt {
-    font-weight: 600;
+.content ul {
+  list-style-type: disc;
+  padding-left: 20px;
 }
 
-.color444::before {
-    content: "";
-    width: 1em;
-    height: 1em;
-    display: inline-block;
-    margin: 0 0.2em;
-    background-color: #444;
-}
-
-.color454545::before {
-    content: "";
-    width: 1em;
-    height: 1em;
-    display: inline-block;
-    margin: 0 0.2em;
-    background-color: #454545;
-}
-
-.color-sqr {
-    width: 1em;
-    height: 1em;
-}
-
-.color444 {
-    color: #444;
-}
-
-.kopimi {
-    display: block;
-    text-align: center;
-}
-
-.col {
-    width: 55%;
-}
-
-.illustration {
-    width: 40%;
-}
-
-figure {
-    margin: 2rem 1rem;
-}
-
-figure img {
-    width: 100%;
-}
-
-figcaption {
-    font-size: 0.7em;
-}
-
-#rainbow {
-    animation: color-change 25s infinite
-}
-
-@keyframes color-change {
-    0% {
-        color: hsl(0, 50%, 50%);
-    }
-    50% {
-        color: hsl(180, 50%, 50%);
-    }
-    100% {
-        color: hsl(359, 50%, 50%);
-    }
-}
-
-.kopimi-logo {
-    margin: 10px auto;
-    height: 2rem;
+.content ul li {
+  margin-bottom: 5px;
 }
