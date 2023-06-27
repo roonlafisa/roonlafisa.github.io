@@ -1,0 +1,166 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap');
+
+body {
+    color: #454545;
+    line-height: 1.5;
+    font-size: 16px;
+    margin: 60px auto;
+    max-width: 800px;
+    padding: 0 10px;
+    font-family: 'Open Sans', sans-serif;
+    text-align: justify;
+    text-justify: inter-word;
+}
+
+
+.inverted {
+    background-color: #000;
+}
+
+.inverted body {
+    color: #fff;
+}
+
+
+h1, h2, h3 {
+    line-height: 1.2;
+}
+
+a {
+    color: #07a;
+}
+
+a:visited {
+    color: #85144b;
+}
+
+.buttons {
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    border-radius: 2px;
+}
+
+.buttons button {
+    padding: 0.2em 0.3em;
+    border: none;
+    text-decoration: underline;
+    margin: 2px;
+    cursor: pointer;
+    text-align: right;
+    width: auto;
+}
+
+
+#invert-btn {
+    background-color: black;
+    color: white;
+}
+
+.red-txt {
+    color: #730000;
+}
+
+.blue-txt {
+    color: #00e;
+    cursor: not-allowed;
+}
+
+.violet-txt {
+    color: #551a8b;
+    cursor: not-allowed;
+}
+
+.wrong {
+    text-decoration: underline;
+    color: #c0392b;
+    font-weight: 600;
+}
+
+.small-txt {
+    font-size: 8px;
+}
+
+.logo {
+    height: 1em;
+}
+
+.color-txt {
+    font-weight: 600;
+}
+
+.color444::before {
+    content: "";
+    width: 1em;
+    height: 1em;
+    display: inline-block;
+    margin: 0 0.2em;
+    background-color: #444;
+}
+
+.color454545::before {
+    content: "";
+    width: 1em;
+    height: 1em;
+    display: inline-block;
+    margin: 0 0.2em;
+    background-color: #454545;
+}
+
+.color-sqr {
+    width: 1em;
+    height: 1em;
+}
+
+.color444 {
+    color: #444;
+}
+
+.kopimi {
+    display: block;
+    text-align: center;
+}
+
+.col {
+    width: 55%;
+}
+
+.illustration {
+    width: 40%;
+}
+
+figure {
+    margin: 2rem 1rem;
+}
+
+figure img {
+    width: 100%;
+}
+
+figcaption {
+    font-size: 0.7em;
+}
+
+#rainbow {
+    animation: color-change 25s infinite
+}
+
+@keyframes color-change {
+    0% {
+        color: hsl(0, 50%, 50%);
+    }
+    50% {
+        color: hsl(180, 50%, 50%);
+    }
+    100% {
+        color: hsl(359, 50%, 50%);
+    }
+}
+
+.kopimi-logo {
+    margin: 10px auto;
+    height: 2rem;
+}
