@@ -45,10 +45,11 @@ body {
 }
 
 
+
 .download-button {
   font-size: 0.8em;
   padding: 0.5em 1em;
-  position: fixed;
+  position: absolute;
   top: 1rem;
   right: 1rem;
   color: inherit;
@@ -67,6 +68,8 @@ header {
   display: block;
   width: 100%;
   float: left;
+  position: relative;
+  
 }
 
 h1 {
