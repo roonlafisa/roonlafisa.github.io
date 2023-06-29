@@ -5,6 +5,7 @@ window.onload = function() {
           displayIntro(data.intro);
           careerSection(data.career);
           projectSection(data.projects);
+          navLinkSmoothScroll();
       })
       .catch(err => console.log('Error: ' + err));
 }
@@ -61,5 +62,18 @@ function projectSection(projectData) {
       projectDiv.appendChild(projectDescription);
 
       projectsSection.appendChild(projectDiv);
+  });
+}
+
+function navLinkSmoothScroll() {
+  let navbarLinks = document.querySelectorAll('#navbar a');
+  
+  navbarLinks.forEach(link => {
+    link.addEventListener('click', (e) => {
+      e.preventDefault();
+      document.querySelector(link.getAttribute('href')).scrollIntoView({
+        behavior: 'smooth'
+      });
+    });
   });
 }
