@@ -28,6 +28,23 @@ body {
   color: var(--main-text);
 }
 
+.back-button {
+  position: fixed;
+  top: 10px;
+  left: 10px;
+  padding: 10px;
+  background-color: #0072d6;
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 5px;
+}
+
+.back-button:hover {
+  background-color: #005fb0;
+}
+
+
 header {
   display: block;
   width: 100%;
