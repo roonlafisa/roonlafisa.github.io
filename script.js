@@ -10,11 +10,8 @@ window.onload = function() {
 }
 
 function displayIntro(introData) {
-  let name = document.querySelector('#name');
   let summary = document.querySelector('#summary');
-
-  name.textContent = introData.name;
-  summary.textContent = introData.summary;
+  summary.textContent = introData;
 }
 
 function careerSection(careerData) {
