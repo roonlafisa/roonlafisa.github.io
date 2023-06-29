@@ -1,129 +1,40 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Engineering Portfolio</title>
     <link rel="stylesheet" href="style.css">
-    <title>Asif Al Noor</title>
 </head>
 
-<!--
-Main body of the website
--->
-
 <body>
-	<div class="buttons">
-        <button id="invert-btn">Inverted mode</button>
-        <button><a href="https://github.com/roonlafisa/">Github</a></button>
-		<button><a href="/assets/files/cv.pdf" target="_blank">Resume</a></button>
-    </div>
-    <!--
-    In order to be able to open it directly in the browser, it must be uder assets/files/cv.pdf 
-    -->
-    
-    <h1>Asif Al Noor</h1>
-	<hr>
-	
-	<h3>About Me</h3>
-	<p>I have been working in the space Industry for over five years with a thirst to learn new things every day. I am a System Integration Engineer skilled in developing RF system and avionics hardware for space and aviation applications.
-        Currently (udpated May 2023), I am working at Drone Delivery Canada, developing delivery drones.
-	
-	<p>This "webcite", is a wall to cite my professional experience.
-	
-	
-	<h3>Experience</h3>
-	<p> I've presented below a brief timeline of my learning curve. To view my recent professional resume, 
-       <a href="/assets/files/cv.pdf" target="_blank">click here.</a>
-		
-	<ul>
-		<li>2010-2013: Completed BSc from <em>Islamic University of Technology</em> in Bangladesh.
-		<li>2014-2016: Moved to Canada and completed MSc from the <em>University of British Columbia</em>. I am very grateful to mysupervisor Dr. Loic Markley his <a title="research group" href="https://merg.ok.ubc.ca/"> MERG research group</a> for extraordinary mentorship.
-		<li>2017-2019: Worked at <em>Helios Wire</em> as the lead RF Engineer. Left the company after it was acquired by Echostar.
-            <ul>
-                <li>Learnt <span id="rainbow">RF system design </span> for cubesats. </li>
-                <li>Learnt <span id="rainbow">RF link budgetting </span>. </li>
-                <li>Learnt practical <span id="rainbow">antenna design </span> for space. </li>
-                <li>Learnt about startup business challenges and practices. </li>
-            </ul> 
-        <li>2019-2020: Worked at <em>Zen Maker Lab</em> as a robotics instructor. I taught robotics to kids aged 8-12.
-            <ul>
-                <li>Learnt prototyping simple electronics into product. </li>
-                <li>Realized how difficult the job of a teacher is. </li>
-            </ul> 
-        <li>2019-2021: Worked for part-time as a consultant at <em>Direct Kinetic Solutions</em> . 
-            <ul>
-                <li>Learnt about various applications of <span id="rainbow">isotropic power </span> </li>
-                <li>More practical link budgets. </li>
-                <li>Learnt about <span id="rainbow">proposal writing </span> for US DOD. </li>
-                <li>Learnt about cubesat <span id="rainbow">EPS system</span> design. </li>
-            </ul> 
-        <li>2020-2021: Worked at <em>SMT Research</em> as an intermediate RF Engineer.  
-            <ul>
-                <li>Learnt about <span id="rainbow">construction iot</span> for building health monitoring. </li>
-                <li>Picked up <span id="rainbow">RFID</span> battery less sensor. </li>
-                <li>Learnt hardware quality control for product release. </li>
-                <li>Hands-on manufacturing of sensors and data loggers. </li>
-                <li>Installed sensors in active construction site. </li>
-                <li>Learnt PCB ordering through cheap manufactrurers in China. </li>
-            </ul> 
-        <li>2021-2023: Working at <em>SpaceRyde</em> as a Senior RF Specialist.  
-            <ul>
-                <li>Advanced <span id="rainbow">RF link budget</span> calculations. </li>
-                <li><span id="rainbow">Assembly, integration and testing (AIT) </span> of rocket avionics hardware. </li>
-                <li>Interfaced with ISED for <span id="rainbow">RF regulatory</span> licensing. </li>
-                <li>Picked-up  <span id="rainbow">solidworks</span> CAD works. </li>
-                <li>Hands-on manufacturing of flight hardware. </li>
-                <li>Developed a few PCB boards from design to assembly - shout out to dear colleague Jonathan Colucci. </li>
-                <li>Picked up <span id="rainbow">systems engineering practices</span>. </li>
-                <li>Attempted to implement <span id="rainbow">environmental testing</span> using MIL-810. </li>
-            </ul>  
-            
-        <li>2022: Picked up <span id="rainbow">HTML</span>, <span id="rainbow">CSS</span> and <span id="rainbow">JS</span> through building this website.
-	<li>2023: Got my basic drone pilot license for operating drones under 25 kg.
-	<li>2023-present: Working at <em>Drone Delivery Canada</em> as a UAV System Integration Engineer.  
-            <ul>
-                <li>Developed avionics hardware for an unmanned helicopter based on MOSA architecture. </li>
-		<li>Implemented system engineering practices following ARP 4754. </li>
-		<li> Received Safety Management Systems (SMS) training. </li>
-		<li>Learnt streaming camera videos via an LTE modem (microhard BulletCATX) on jetson based linux. </li>
-		<li>Worked on accessing Pixhawk 6c autopilot via Jetson Nano to monitor and control a drone. </li>
-                <li>And many more... </li>
+    <div id="container">
+        <nav>
+            <ul id="navbar">
+                <li><a href="#intro">Intro</a></li>
+                <li><a href="#career">Career</a></li>
+                <li><a href="#projects">Projects</a></li>
             </ul>
-	</ul>
-	
-    <h3>Personal Projects</h3>
-	<p> I've listed few of my notable personal projects. 	
-	<ul>
-		<li>2022: The Omoko Board: an STM32 based sensor fusion board. </li>
-		<li>2022: Computer vision: gesture detection-based game on Tx2i Jetson Nano for my toddler. </li>       
-	</ul>
+        </nav>
 
-    <h3>Publications</h3>
-    <p> I've published the following papers during my undergrand and masters. 
-        I'm avoiding writing the titles of the papers in this page because they are not quite in-line with my recent industry expeciences. 
-        However, if you are interested, check out the summarized titles below followed by the publication links.	
-    <ul>
-        <li>More transformation electromagnetics in designing antennas. <a title="Paper link 1" href="https://ieeexplore.ieee.org/abstract/document/7695749"> Publication URL</a>. </li>
-        <li>Transformation electromagnetics in desinging antennas.  <a title="Paper link 2" href="https://ieeexplore.ieee.org/abstract/document/8739640"> Publication URL</a>. </li>
-        <li>More surface plasmon propagation in the MDM Waveguides.  <a title="Paper link 3" href="https://photonics.pl/PLP/index.php/letters/article/view/5-41"> Publication URL</a>. </li>
-        <li>Extracting debye model parameters for metals. <a title="Paper link 4" href="https://springerplus.springeropen.com/articles/10.1186/2193-1801-2-426"> Publication URL</a>. </li>
-        <li>More surface plasmon polariton in MDM waveguides. <a title="Paper link 5" href="https://ieeexplore.ieee.org/document/6750318"> Publication URL</a>.</li>
-        <li>More Surface Plasmon Polariton in waveguides. <a title="Paper link 6" href="https://ieeexplore.ieee.org/document/6750300"> Publication URL</a>. </li>
-        <li>Surface Plasmon Polariton in waveguide. <a title="Paper link 7" href="https://ieeexplore.ieee.org/document/6720896"> Publication URL</a>. </li>
-    </ul>	
-    
-<footer>
-        <h3>Epilouge</h3> 
-        <p>To contact, email me roonlafisa (at) gmail (dot) com. You can also find me through my <a title="Linkedin" href="www.linkedin.com/in/aalnoor/"> LinkedIn profile</a>.</p>
-        <p>Copyright: Asif Al Noor, 2023.</p>
-        <p>Powered by <a title="Website Template" href="https://github.com/jeaneustachedeveloppeur/BestMotherFuckingWebsite"> this template</a>.</p>
-    </footer>
+        <section id="intro">
+            <h1 id="name"></h1>
+            <p id="summary"></p>
+        </section>
 
+        <section id="career">
+            <h2>Career History</h2>
+            <div id="career-section"></div>
+        </section>
 
+        <section id="projects">
+            <h2>Projects</h2>
+            <div id="projects-section"></div>
+        </section>
+    </div>
 
-    <script src="index.js"></script>
- 
-
+    <script src="script.js"></script>
 </body>
+
 </html>
