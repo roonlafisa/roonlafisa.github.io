@@ -1,35 +1,71 @@
+@import"https://rsms.me/interface/interface.css";
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 21px;
+}
+
 body {
-    font-family: Arial, sans-serif;
-    background: white;
-    color: black;
-    font-size: 16px;
-    margin: 0;
-    padding: 0;
+  margin: 0;
+  padding: 0;
 }
 
-nav {
-    background: #333;
-    color: white;
-    padding: 15px;
+.b--black-03 {
+  border-color: rgba(0,0,0,.03);
 }
 
-nav ul {
-    list-style: none;
-    padding: 0;
+h1, h2, h3, h4, h5, h6, p, ul {
+  margin: 0 0 1.5em;
+  line-height: 1.15;
 }
 
-nav ul li {
-    display: inline;
-    margin-right: 20px;
+li, p {
+  line-height: 1.5;
 }
 
-nav ul li a {
-    color: white;
-    text-decoration: none;
+li {
+  margin-bottom: .25rem;
 }
 
-section {
-    padding: 50px;
-    margin-bottom: 50px;
-    border-bottom: 1px solid #ccc;
+a {
+  color: inherit;
 }
+
+ul {
+  padding-left: 0;
+}
+
+button, input, label, textarea {
+  font-size: 1rem;
+  border-width: 1px;
+  border-style: solid;
+  border-radius: 0;
+  -webkit-appearance: none;
+  box-shadow: none;
+}
+
+button {
+  cursor: pointer;
+}
+
+::-webkit-input-placeholder {
+  color: #787878;
+}
+
+::-moz-placeholder {
+  color: #787878;
+}
+
+:-ms-input-placeholder {
+  color: #787878;
+}
+
+::placeholder {
+  color: #787878;
+}
+
+/* More styles are here. The full styles are omitted due to the character limit */
+/* Make sure you include the entire style text in your actual CSS file. */
